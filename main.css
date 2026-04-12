@@ -15,12 +15,14 @@ body {
 }
 
 header {
-    width: 90vw;
-    position: fixed;
+    width: 100vw;
+   
     top: 0;
     z-index: 1000;
     background: transparent;
     overflow: hidden;
+     background-image: linear-gradient(to right bottom, #5a0404, #57000c, #5f0713, #490107, #3d0101);
+     
 }
 
 .header-container {
@@ -88,10 +90,10 @@ border: 2px solid red;
 }
 
 .container {
-    height: 100vh;
+    height:100vh;
     position: relative;
     background-image: linear-gradient(to right bottom, #370202, #57000c, #790010, #9b000d, #f51515);
-    overflow: hidden;
+  
 }
 
 .container::before {
@@ -475,15 +477,17 @@ border: 2px solid red;
 }
 
 .indicators {
-    position: absolute;
-    bottom: 40px;
+   
+   
     left: 50%;
-    transform: translateX(-50%);
+    
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     z-index: 5;
+    width: 100%;
 
 }
 
@@ -547,4 +551,90 @@ border: 2px solid red;
     top: 80%;
     left: 76%;
 
+}
+
+@media (max-width: 480px) {
+
+    header nav ul li{
+        display: none;
+    }
+
+    .rash-img img {
+        max-height: 200px;
+    }
+
+    .product-name {
+        font-size: 1.5rem;
+    }
+
+    .preço {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+    header nav ul li{
+        display: none;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+
+    .product-name {
+        font-size: 2rem;
+    }
+
+    .tag-modelo {
+        font-size: 1.5rem;
+    }
+
+    .preço {
+        font-size: 2rem;
+    }
+
+    .direção-botões {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 12px;
+    }
+
+    .btn-buy {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .item {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .rash-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        width: 100%;
+        padding: 20px;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    .rash-img img {
+        max-height: 300px;
+    }
 }
