@@ -82,7 +82,7 @@ header nav ul li:hover::after {
 }*/
 
 .container {
-    min-height: 100vh;
+    height: 926px;
     position: relative;
     background-image: linear-gradient(to right bottom, #370202, #57000c, #790010, #9b000d, #f51515);
     overflow: hidden;
