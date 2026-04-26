@@ -16,13 +16,13 @@ body {
 
 header {
     width: 100vw;
-   
+
     top: 0;
     z-index: 1000;
     background: transparent;
     overflow: hidden;
-     background-image: linear-gradient(to right bottom, #5a0404, #57000c, #5f0713, #490107, #3d0101);
-     
+    background-image: linear-gradient(to right bottom, #5a0404, #57000c, #5f0713, #490107, #3d0101);
+
 }
 
 .header-container {
@@ -69,31 +69,35 @@ header nav ul li:hover::after {
 }
 
 .btn-car {
-    padding:  20px 25px;
+    padding: 20px 25px;
     border-radius: 20%;
     background-color: #ff0000;
     box-shadow: 0 0px 30px rgba(254, 0, 0, 0.5);
     border: #fff;
 
 }
+
 .btn-car:hover {
     transform: scale(1.09);
     cursor: pointer;
     background: #610909d1;
-  transition: background 0.4s ease, transform 0.4s ease;
+    transition: background 0.4s ease, transform 0.4s ease;
 }
 
-.btn.ativo{
-background: white;
-color: black;
-border: 2px solid red;
+.btn.ativo {
+    background: white;
+    color: black;
+    border: 2px solid red;
 }
 
 .container {
-    height:100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     position: relative;
     background-image: linear-gradient(to right bottom, #370202, #57000c, #790010, #9b000d, #f51515);
-  
+
 }
 
 .container::before {
@@ -134,17 +138,13 @@ border: 2px solid red;
 }
 
 .item {
-    position: absolute;
-    inset: 0;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-    gap: 5px;
-    /*ANIMAÇÃO*/
+    flex-direction: column;
+    gap: 20px;
 
-    transform: translateX(100vw);
-    transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+    opacity: 1;
+    transform: none;
 }
 
 .active {
@@ -155,28 +155,23 @@ border: 2px solid red;
 
 
 .rash-img {
-    height: 100%;
-    width: 45%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
 }
 
-
-
-
 .rash-img img {
-    max-width: 100%;
-    max-height: 65%;
-    filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 1.3));
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 
-    /*ANIMAÇÃO*/
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.8));
+
+    /* mantém animação */
     transform: translateX(500px);
     opacity: 0;
     transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.87s;
-
 }
 
 .active .rash-img img {
@@ -203,19 +198,19 @@ border: 2px solid red;
 
 
 .preço {
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 8px;
-    /*ANIMAÇÃO*/
-    transform: translateX(500px);
-    opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.6s;
+    margin-bottom: 6px;
 
+    /* animação melhor */
+    transform: translateY(20px);
+    color: #ff0000;
+    opacity: 0;
+    transition: all 0.4s ease;
 }
 
 .active .preço {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
@@ -235,17 +230,19 @@ border: 2px solid red;
     opacity: 1;
 }
 
-.avaliacao{
-  display: flex;
-  justify-content: space-between;
-  gap: 7px;
-  font-size: 20px;
-  align-items: center;
+.avaliacao {
+    display: flex;
+    justify-content: space-between;
+    gap: 7px;
+    font-size: 20px;
+    align-items: center;
 }
-.total-estrelas{
+
+.total-estrelas {
     color: white;
 }
-.estrelas{
+
+.estrelas {
     color: gold;
     font-size: 20px;
 }
@@ -270,14 +267,17 @@ border: 2px solid red;
 
 
 .content {
-    margin-top: 100px;
-    width: 55%;
-    padding-right: 80px;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    z-index: 2;
     flex-direction: column;
+    gap: 10px;
+
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
 }
 
 .direção-botões {
@@ -380,63 +380,67 @@ border: 2px solid red;
 }
 
 .product-name {
-    font-size: 3.5rem;
+    font-size: 1.8rem;
     font-family: 'orbitron', sans-serif;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    /*ANIMAÇÃO*/
-    transform: translateX(500px);
-    opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.6s;
+    line-height: 1.2;
+    margin-bottom: 10px;
 
+    /* animação melhor */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
 }
 
 .active .product-name {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .description {
-    font-size: 1.1rem;
-    color: #ffffff;
-    line-height: 1.6;
-    margin-bottom: 17px;
-    max-width: 600px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
 
-    /*ANIMAÇÃO*/
-    transform: translateX(500px);
+    width: 100%;
+    max-width: 100%;
+
+    color: #ccc;
+
+    /* animação melhor */
+    transform: translateY(20px);
     opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.6s;
-
+    transition: all 0.4s ease;
 }
 
 .active .description {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
 .btn-buy {
-    padding: 15px 10px;
+    width: 100%;
+    padding: 16px;
     border-radius: 30px;
     border: none;
+
     background: white;
     color: black;
+
     font-size: 1rem;
     font-weight: 800;
-    cursor: pointer;
-    margin-top: 20px;
-    /*ANIMAÇÃO*/
-    transform: translateX(500px);
-    opacity: 0;
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    transition-delay: 0.6s;
+    text-align: center;
 
+    cursor: pointer;
+    margin-top: 15px;
+
+    /* animação mais leve */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s ease;
 }
 
 .active .btn-buy {
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
 }
 
@@ -477,11 +481,11 @@ border: 2px solid red;
 }
 
 .indicators {
-   
-   
+
+
     left: 50%;
-    
-    
+
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -553,78 +557,8 @@ border: 2px solid red;
 
 }
 
-@media (min-width: 480px){
-    .container{
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-    .item{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .rash-img{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .rash-img img{
-        width: 100%;
-        max-width: 300px;
-        height: auto;  
-    }
-    .content{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    /*TIPOGRAFIA*/
 
-    .product-name{
-        font-size: 1.6rem;
-    }
-    .tag-modelo{
-        font-size: 1.2rem;
-    }
-    .preço{
-        font-size: 1.8rem;
-    }
-    /*BOTÃO DE COMPRA*/
-
-    .btn-buy{
-        width: 100%;
-        padding: 15px;
-        font-size: 1rem;
-    }
-
-    /*TAMANHOS*/
-    .direção-botões {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.btn {
-    flex: 1;
-    min-width: 60px;
-}
-
-/*LIMPAR O QUE ATRAPALHA*/
-.arrows{
-    display: none;
-}
-.container::before{
-    display: none;
-}
-/*SLIDER*/
-.item {
-    position: relative;
-    transform: none !important;
-    opacity: 1 !important;
-}
-}
 /*
 @media (max-width: 480px) {
 
