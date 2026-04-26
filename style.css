@@ -1,4 +1,4 @@
-* {
+/** {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", sans-serif;
@@ -80,7 +80,7 @@ header nav ul li:hover::after {
     cursor: pointer;
     background: #610909d1;
   transition: background 0.4s ease, transform 0.4s ease;
-}*/
+}
 
 .container {
     height: 926px;
@@ -379,3 +379,4 @@ header nav ul li:hover::after {
         left: 80%;
 
     }
+        */
