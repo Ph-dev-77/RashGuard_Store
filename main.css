@@ -579,6 +579,51 @@ border: 2px solid red;
         flex-direction: column;
         gap: 10px;
     }
+
+    /*TIPOGRAFIA*/
+
+    .product-name{
+        font-size: 1.6rem;
+    }
+    .tag-modelo{
+        font-size: 1.2rem;
+    }
+    .preço{
+        font-size: 1.8rem;
+    }
+    /*BOTÃO DE COMPRA*/
+
+    .btn-buy{
+        width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    /*TAMANHOS*/
+    .direção-botões {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn {
+    flex: 1;
+    min-width: 60px;
+}
+
+/*LIMPAR O QUE ATRAPALHA*/
+.arrows{
+    display: none;
+}
+.container::before{
+    display: none;
+}
+/*SLIDER*/
+.item {
+    position: relative;
+    transform: none !important;
+    opacity: 1 !important;
+}
 }
 /*
 @media (max-width: 480px) {
