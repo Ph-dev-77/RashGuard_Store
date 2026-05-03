@@ -650,3 +650,21 @@ header nav ul li:hover::after {
 
 
 }
+
+@media (max-width: 768px) {
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .item {
+        position: relative;
+        inset: auto;
+
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+}
