@@ -580,24 +580,27 @@ header nav ul li:hover::after {
     }
 
     
-    .list {
-        display: block;
-        flex-direction: column;
-        gap: 60px;
-    }
-    
-    .item{
-        position: relative;
+     .list {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        gap: 20px;
-
-        transform: none !important;
-        opacity: 1 !important;
+        gap: 80px;
     }
 
+    .item {
+        position: relative; /* 🔥 ESSENCIAL */
+        inset: unset;       /* 🔥 REMOVE SOBREPOSIÇÃO */
+        
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        opacity: 1 !important;
+        transform: none !important;
+    }
     .rash-img{
         width: 100%;
         height: auto;
