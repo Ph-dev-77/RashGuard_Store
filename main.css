@@ -581,13 +581,14 @@ header nav ul li:hover::after {
 
     
     .list {
-        display: flex;
+        display: block;
         flex-direction: column;
         gap: 60px;
     }
     
     .item{
         position: relative;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         text-align: center;
@@ -649,9 +650,14 @@ header nav ul li:hover::after {
         width: 100%;
     }
 
-    .arrows{
+   
+
+    .arrows,
+    .indicators {
         display: none;
     }
+
+
 
     .container::before{
         display: none;

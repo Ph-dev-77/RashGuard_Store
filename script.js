@@ -9,6 +9,32 @@ let active = 0;
 const total = items.length
 let timer;
 
+function isMobile() {
+    return window.innerWidth <= 500;
+}
+
+function update(direction){
+    if (isMobile()) return; //bloquio no mobile
+
+    document.querySelector('.item.active').classList.remove('.active')
+    document.querySelector('.dot.active').classList.remove('active')
+
+    if(direction > 0){
+
+        active++
+        if(active === total) active = 0
+        else{
+            active--
+            if(active < 0) acyive = total - 1
+        }
+
+        items[active].classList.add('active')
+        dots[active].classList.add('active')
+
+        numberIndicador.textContent = String(active + 1).padStart(2, '0')
+    }
+}
+
 function update(direction) {
     document.querySelector('.item.active').classList.remove('active')
     document.querySelector('.dot.active').classList.remove('active')
