@@ -569,7 +569,22 @@ header nav ul li:hover::after {
 
 @media  (max-width: 500px) {
 
+    .header-container {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav {
+        display: none;
+    }
+
     
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
     
     .item{
         position: relative;
@@ -597,7 +612,7 @@ header nav ul li:hover::after {
 
     .content{
         width: 100%;
-        padding: 0 15px;
+        padding: 0 20px;
         margin-top: 0;
         align-items: center;
     }
