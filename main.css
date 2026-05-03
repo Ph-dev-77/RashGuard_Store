@@ -569,6 +569,10 @@ header nav ul li:hover::after {
 
 @media  (max-width: 500px) {
 
+    .btn-car{
+        display: none;
+    }
+
     .header-container {
         padding: 20px;
         flex-direction: row;
