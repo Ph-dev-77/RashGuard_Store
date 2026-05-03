@@ -674,6 +674,22 @@ header nav ul li:hover::after {
     opacity: 1 !important;
 }
 
+/*Ajuste nas descrições dos produtos*/
+
+.content *,
+.rash-img img,
+.product-name,
+.description,
+.preço,
+.btn,
+.btn-buy,
+.tag-modelo,
+.product-tag {
+    
+    transform: none !important;
+    opacity: 1 !important;
+}
+
 
 }
 
