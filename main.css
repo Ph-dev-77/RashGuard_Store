@@ -569,9 +569,7 @@ header nav ul li:hover::after {
 
 @media  (max-width: 500px) {
 
-    body{
-      background: blue;  
-    }
+    
     
     .item{
         position: relative;
@@ -628,7 +626,7 @@ header nav ul li:hover::after {
         flex: 1;
         min-width: 60px;
         padding: 10px;
-        background: blue;
+        
 
     }
 
